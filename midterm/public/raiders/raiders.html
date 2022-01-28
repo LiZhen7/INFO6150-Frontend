@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubPage</title>
+    <link rel="stylesheet" href="raiders.css" />
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="LOLlogo.png" alt="League of Legends">
+        <h1>League of Legends</h1>
+        <nav class="menubar">
+            <ul class="menu">
+                <li><a href="http://localhost:3000/">Home</a></li>
+                <li>
+                    <button type="button">NEWS</button>
+                    <ul class="submenu">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">GAME UPDATES</a></li>
+                        <li><a href="#">ESPORTS</a></li>
+                        <li><a href="#">DEV</a></li>
+                        <li><a href="#">MEDIA</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://localhost:3000/raiders/raiders.html">RAIDERS</a></li>
+                <li><a href="http://localhost:3000/playnow/playnow.html"><span>PLAY NOW</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="raiders-form" action="" method="POST">
+            <label for="level"><span>Choose your game level: </span>
+                <select name="level" id="level" required>
+                    <option value="">Please choose your level</option>
+                    <option value="1">NEW</option>
+                    <option value="2">EXPERIENCED</option>
+                    <option value="3">MASTER</option>
+                </select>
+            </label>
+            <button class="raiders-form__submit" type="submit">Choose</button>
+        </form>
+        <div>
+            <h2>
+                Some useful guidance:
+            </h2>
+            <div class="guidance">
+                <h3>Champions Information</h3>
+                <p>Lineup is the key to start, how to match the champion lineup is a huge question. For the first time
+                    into the league of legends, we can start from the understanding of the conventional configuration.
+                    Under normal circumstances, the team will choose tank type champions to go top lane (commonly known
+                    as "top"), mage type champions to choose middle lane (commonly known as "mid"), high mobility
+                    champions to select in the wild area (commonly known as "jungle"), striker type champions (also
+                    referred to as "ADC") and support champions to choose bot lane (commonly known as "bot").</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>The text are translated from Chinese website by myself.</p>
+    </footer>
+    <script src="raiders.js"></script>
+</body>
+
+</html>

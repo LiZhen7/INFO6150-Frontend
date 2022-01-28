@@ -1,0 +1,59 @@
+.aboutTitle {
+    text-align: center;
+}
+
+.aboutIntro {
+    margin: 0 10px;
+
+    text-align: center;
+}
+
+.aboutSubtitle {
+    text-align: center;
+}
+
+.aboutCard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+}
+
+.card {
+    grid-column: span 6;
+    
+    margin: 10px;
+    border: 0.1rem solid black;
+
+    background-color: lightblue;
+}
+
+.card__photo {
+    width: 100%;
+    height: auto;
+}
+
+.card__title {
+    margin: 0.5rem 0;
+
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .about {
+        margin: 0 0.5rem;
+    }
+    .aboutCard {
+        gap: 1rem;
+    }
+
+    .card {
+        grid-column: span 4;
+    }
+}
+
+@media (min-width: 960px) {
+    .about {
+        width: 960px;
+        margin: 0 auto;
+    }
+}

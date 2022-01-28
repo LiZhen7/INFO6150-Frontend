@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+.info {
+    border: .11rem solid black;
+}
+
+.info__label {
+    position: relative;
+    top: -0.75rem;
+    left: 1rem;
+    background-color: white;
+}
+
+p {
+    margin: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.label__input {
+    width: 83%;
+}
+
+/* mobile sizing */
+
+/* Desktop changes */
+@media (min-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+}

@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    "Logo header"
+    "menubar menubar";
+
+    background-color: black;
+}
+
+header .logo {
+    grid-area: Logo;
+
+    width: 7rem;
+    height: auto;
+}
+
+header h1 {
+    grid-area: header;
+
+    font-size: 150%;
+
+    color: white;
+    text-align: center;
+}
+
+.menubar {
+    grid-area: menubar;
+
+    border-top: 1px solid lightgrey;
+}
+
+.menubar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:0;
+    padding: 0;
+    font-size: 75%;
+}
+
+.menu > li{
+    padding: 1rem;
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.menu span {
+    background-color: lightblue;
+    padding: 0.5rem 1rem;
+}
+
+.menu span:hover {
+    background-color: lightseagreen;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+
+    background-color: black;
+
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    position: absolute;
+    left: 0;
+    top: 3.4rem;
+}
+
+.submenu a {
+    display: inline-block;
+
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: darkgrey;
+}
+
+.menu button {
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+    color: white;
+}
+
+.submenu.shown {
+    visibility: visible;
+}
+
+main {
+    flex-grow: 1;
+
+    background-color:lightgrey;
+    padding: 1rem;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 150%;
+}
+
+label span {
+    padding-bottom: 0.5rem;
+}
+
+form button {
+    font-size: 150%;
+    margin-top: 1rem;
+}
+
+footer {
+    padding: 0.5rem;
+
+    background-color: black;
+    color: white;
+}
+
+/* Desktop changes */
+@media (min-width: 600px) {
+    header .logo {
+        width: 10rem;
+    }
+
+    header h1 {
+        font-size: 200%;
+    }
+
+    .menubar > ul {
+        font-size: 100%;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: auto 75vw;
+        grid-template-areas: "level guidance";
+    }
+
+    main form {
+        grid-area: level;
+    }
+
+    form button {
+        margin-top: 2rem;
+    }
+
+    main h2 {
+        grid-area: guidance;
+    }
+
+    main .guidance {
+        margin: 0 5rem;
+    }
+}

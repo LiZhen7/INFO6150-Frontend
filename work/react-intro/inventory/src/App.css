@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+div .App {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  margin: 1rem;
+}
+
+button {
+  margin: 1rem;
+}
+
+.Reorder button {
+  animation-name: test;
+  animation-duration: 3s;
+}
+
+@keyframes test{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}

@@ -1,0 +1,38 @@
+.tabs {
+  margin: auto;
+  margin-top: 5rem;
+  width: 80%;
+  max-width: 40rem;
+  height: 15rem;
+  border: 1px solid black;
+}
+
+.tabs-title {
+  display: flex;
+  flex-direction: row;
+  
+  border-bottom: 1px solid #ccc;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.title-content {
+  display: inline-block;
+
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.title-content.active {
+  background-color:white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.tabs-content {
+  padding: 0.5rem;
+}

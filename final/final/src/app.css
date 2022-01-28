@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  font-family: sans-serif;
+
+  background-color: lightgray;
+}
+
+header {
+  background-color: black;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  height: 75px;
+  width: auto;
+}
+
+header h1 {
+  margin: auto;
+
+  font-size: 140%;
+
+  color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+
+  border-top: 1px solid lightgrey;
+
+  color: white;
+}
+
+.menu button {
+  padding: 0.5rem 1rem;
+
+  border: none;
+
+  background-color: inherit;
+  color: white;
+}
+
+.menu > button {
+  display: none;
+}
+
+.menu button:hover {
+  background-color: darkgray;
+}
+
+.menu li {
+  position: relative;
+  list-style-type: none;
+}
+
+.menuForm {
+  margin-left: auto;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+
+  background-color: black;
+
+  padding: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 2rem;
+
+  transition: max-height 0.5s;
+}
+
+.submenuTitle {
+  width: 99.43px;
+  padding: 8px 25px;
+}
+
+.menu li:focus-within .submenu,
+.menu li:hover .submenu {
+    max-height: 90vh;
+    visibility: visible;
+}
+
+.formStatus {
+  display: none;
+}
+
+.formStatus--active {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.menuForm p {
+  margin: 0;
+}
+
+.skip-link {
+  background: darkgray;
+  color: black;
+  font-weight: 700;
+  left: 20%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-400%);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  transform: translateY(-250%);
+}
+
+footer {
+  margin-top: auto;
+
+  font-size: 80%;
+
+  text-align: center;
+
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .menu li {
+    display: none;
+  }
+
+  .menu > button {
+    display: inline-block;
+  }
+
+  footer {
+    font-size: 100%;
+  }
+}

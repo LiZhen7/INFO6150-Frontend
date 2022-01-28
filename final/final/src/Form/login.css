@@ -1,0 +1,70 @@
+.login {
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    top: 20%;
+    left: 50%;
+    width: 330px;
+    height: 60%;
+    transform: translate(-50%, 0);
+}
+
+.login p {
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    font-weight: bold;
+    font-size: 130%;
+
+    text-align: center;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 15px 80px;
+
+    width: 330px;
+    height: 200px;
+}
+
+.login label {
+    margin: 0.5rem 0;
+}
+
+.login__button {
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: lightblue;
+}
+
+.submitSpinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.errorNotice {
+    text-align: center;
+
+    color: red;
+}
+
+.loginNote {
+    text-align: center;
+}
